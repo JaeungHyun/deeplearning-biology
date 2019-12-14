@@ -17,7 +17,7 @@ You might also want to refer to the [awesome deepbio](https://github.com/gokcene
     - [Multi-omics integration](#integration)
   - [Proteomics](#proteomics)
   - [Metabolomics](#metabolomics)
-    - [Generative models](#generative)
+  - [Generative models](#generative)
   - [Genomics](#genomics)
     - [Variant calling](#genomics_variant-calling)
     - [Gene expression](#genomics_expression)
@@ -159,7 +159,7 @@ The authors use CNNs on feature maps extracted from protein 3D structures in the
 
 Predicts RNA-binding proteins using CNNs.
 
-**EVOVAE: Vartiational autoencoding of Protein Sequences**[[code](https://github.com/samsinai/VAE_protein_function)][[arXiv preprint](https://arxiv.org/abs/1712.03346)]
+**EVOVAE: Variational autoencoding of Protein Sequences**[[code](https://github.com/samsinai/VAE_protein_function)][[arXiv preprint](https://arxiv.org/abs/1712.03346)]
 
 From the abstract: "We present an embedding of natural protein sequences using a Variational Auto-Encoder and use it to predict how mutations affect protein function. We use this unsupervised approach to cluster natural variants and learn interactions between sets of positions within a protein. This approach generally performs better than baseline methods that consider no interactions within sequences, and in some cases better than the state-of-the-art approaches that use the inverse-Potts model. This generative model can be used to computationally guide exploration of protein sequence space and to better inform rational and automatic protein design."
 
@@ -170,6 +170,10 @@ From the abstract: "Biology and medicine have a long-standing interest in comput
 **Structure-Based Function Prediction using Graph Convolutional Networks** [[preprint](https://www.biorxiv.org/content/biorxiv/early/2019/10/04/786236.full.pdf)]
 
 From the abstract: "We present a deep learning Graph Convolutional Network (GCN) trained on sequence and structural data and evaluate it on ~40k proteins with known structures and functions from the Protein Data Bank (PDB). Our GCN predicts functions more accurately than Convolutional Neural Networks trained on sequence data alone and competing methods. Feature extraction via a language model removes the need for constructing multiple sequence alignments or feature engineering. Our model learns general structure-function relationships by robustly predicting functions of proteins with ≤ 30% sequence identity to the training set. Using class activation mapping, we can automatically identify structural regions at the residue-level that lead to each function prediction for every protein confidently predicted, advancing site-specific function prediction."
+
+**MiniFold: a re-implementation of DeepMind's AlphaFold** [[github](https://github.com/EricAlcaide/MiniFold)]
+
+One of the more spectacular successes of deep learning in biology in the recent years was when DeepMind's AlphaFold model won the CASP13 protein structure prediction challenge. It has not been listed on this page partly because there was no open implementation. MiniFold is an attempt to re-implement AlphaFold in a somewhat more minimalistic way.
 
 ## Metabolomics <a name="metabolomics"></a>
 
@@ -193,6 +197,17 @@ The authors compare Restricted Boltzmann Machines (RBM) and Generative Adversari
 
 The authors present a generative model for removing statistical background noise in single-cell RNA-seq datasets.
 
+**scVAE: Single-cell variational auto-encoders** [[code](https://github.com/scvae/scvae)][[preprint](https://www.biorxiv.org/content/10.1101/318295v4)]
+
+scVAE is a command-line tool for modelling single-cell transcript counts using variational auto-encoders. Using variational autoencoders it is possible both to model the data in a more compact way and to generate realistic synthetic data based on the distribution that the real data come from.
+
+**Realistic in silico generation and augmentation of single cell RNA-seq data using Generative Adversarial Neural Networks** [[code](https://github.com/imsb-uke/scGAN)][[preprint](https://www.biorxiv.org/content/10.1101/390153v2)]
+
+From the abstract: "A fundamental problem in biomedical research is the low number of observations available, mostly due to a lack of available biosamples, prohibitive costs, or ethical reasons. Augmenting few real observations with generated in silico samples could lead to more robust analysis results and a higher reproducibility rate. Here we propose the use of conditional single cell Generative Adversarial Neural Networks (cscGANs) for the realistic generation of single cell RNA-seq data. cscGANs learn non-linear gene-gene dependencies from complex, multi cell type samples and use this information to generate realistic cells of defined types."
+
+**ProteinGAN: Expanding functional protein sequence space using generative adversarial networks** [[code](https://github.com/biomatterdesigns/ProteinGAN)][[preprint](https://www.biorxiv.org/content/early/2019/10/04/789719.full.pdf)]
+
+From the abstract: "De novo protein design for catalysis of any desired chemical reaction is a long standing goal in protein engineering, due to the broad spectrum of technological, scientific and medical applications. Currently, mapping protein sequence to protein function is, however, neither computationionally nor experimentally tangible. Here we developed ProteinGAN, a specialised variant of the generative adversarial network that is able to 'learn' natural protein sequence diversity and enables the generation of functional protein sequences. ProteinGAN learns the evolutionary relationships of protein sequences directly from the complex multidimensional amino acid sequence space and creates new, highly diverse sequence variants with natural-like physical properties. Using malate dehydrogenase as a template enzyme, we show that 24% of the ProteinGAN-generated and experimentally tested sequences are soluble and display wild-type level catalytic activity in the tested conditions in vitro, even in highly mutated (>100 mutations) sequences. ProteinGAN therefore demonstrates the potential of artificial intelligence to rapidly generate highly diverse novel functional proteins within the allowed biological constraints of the sequence space."
 
 ## Genomics <a name="genomics"></a>
 
